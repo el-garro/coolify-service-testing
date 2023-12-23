@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 services:
   wg-easy:
     image: ghcr.io/wg-easy/wg-easy
@@ -8,10 +8,11 @@ services:
       - WG_DEFAULT_ADDRESS=$WG_DEFAULT_ADDRESS
       - WG_DEFAULT_DNS=$WG_DEFAULT_DNS
       - WG_DEVICE=eth1
+      - SERVICE_FQDN_WIREGUARD_51821
     ports:
-      - '51820:51820/udp'
+      - "51820:51820/udp"
     volumes:
-      - '~/.wg-easy:/etc/wireguard'
+      - wg-data:/etc/wireguard/
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
