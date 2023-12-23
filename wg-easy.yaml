@@ -8,9 +8,8 @@ services:
       - WG_DEFAULT_ADDRESS=$WG_DEFAULT_ADDRESS
       - WG_DEFAULT_DNS=$WG_DEFAULT_DNS
       - WG_DEVICE=eth1
-      - SERVICE_FQDN_WIREGUARD
+      - SERVICE_FQDN_WIREGUARD_51821
     ports:
-      - "51821:51821/tcp"
       - "51820:51820/udp"
     volumes:
       - 'wg-data:/etc/wireguard/'
