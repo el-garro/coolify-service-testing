@@ -9,7 +9,6 @@ services:
       - WG_DEFAULT_DNS=$WG_DEFAULT_DNS
       - WG_DEVICE=eth1
       - SERVICE_FQDN_WIREGUARD_51821
-      - SERVICE_URL_WIREGUARD_51821
     ports:
       - "51820:51820/udp"
     volumes:
