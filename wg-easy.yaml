@@ -12,7 +12,7 @@ services:
     ports:
       - "51820:51820/udp"
     volumes:
-      - wg-data:/etc/wireguard/
+      - 'wg-data:/etc/wireguard/'
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
@@ -25,6 +25,3 @@ services:
       interval: 2s
       timeout: 10s
       retries: 15
-volumes:
-  wg-data:
-    external: true
