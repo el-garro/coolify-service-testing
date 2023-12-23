@@ -27,3 +27,4 @@ services:
       retries: 15
 volumes:
   wg-data:
+    external: true
